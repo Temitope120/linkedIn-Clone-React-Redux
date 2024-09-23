@@ -10,6 +10,7 @@ import { auth } from './firebase';
 import { useDispatch } from 'react-redux';
 import { login } from "./userSlice";
 import { logout } from "./userSlice";
+import Widgets from './Widgets';
 
 
 function App() {
@@ -54,7 +55,7 @@ function App() {
           </div>
 
           <div className="right_widgets">
-            Testing
+            <Widgets />
           </div>
 
         </div>
