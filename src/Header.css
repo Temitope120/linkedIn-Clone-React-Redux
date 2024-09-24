@@ -41,3 +41,24 @@ form{
 .header__right {
   display: flex;
 }
+.toggle__icon{
+  display: none;
+}
+
+@media screen and (max-width: 430px) {
+  .header{
+    height: 50px;
+  }
+  .header__right {
+    display: none;
+  }
+  .header__right.active{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+  }
+  .toggle__icon{
+    display: block;
+  }
+}

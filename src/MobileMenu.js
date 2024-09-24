@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Header.css';
+import './MobileMenu.css';
 
 import SearchIcon from "@mui/icons-material/Search";
 import HomeIcon from "@mui/icons-material/Home";
@@ -13,18 +14,9 @@ import { logout } from './userSlice';
 import { auth } from './firebase';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import MobileMenu from './MobileMenu';
-// import ArrowDownward from '@mui/icons-material/ArrowDownward';
 
 
-function Header() {
-    const [mobileMenuOpen, setMenuOpen] = useState(false);
-
-    // Function to toggle the menu
-    const toggleMenu = () => {
-        setMenuOpen(mobileMenuOpen => !mobileMenuOpen); // Toggle the state between true/false
-    };
-
+function MobileMenu() {
     const dispatch = useDispatch();
     const logOut = () => {
         dispatch(logout())
@@ -32,17 +24,8 @@ function Header() {
 
     }
     return (
-        <div className="header">
-            <div className="header__left">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/1200px-LinkedIn_icon.svg.png" alt="logo" />
-
-                <div className="header__search">
-                    <SearchIcon />
-                    <input type='text' placeholder='Search' />
-                </div>
-            </div>
-
-            {!mobileMenuOpen  && <div className='header__right'>
+        <div>
+            <div className='mobileMenuItems'>
                 <HeaderOption Icon={HomeIcon} title='Home' />
                 <HeaderOption Icon={SupervisorAccountIcon} title='My Network' />
                 <HeaderOption Icon={BusinessCenterIcon} title='jobs' />
@@ -50,21 +33,9 @@ function Header() {
                 <HeaderOption Icon={NotificationsIcon} title='Notifications' />
                 {/* dropdown={ArrowDownward}  */}
                 <HeaderOption title='Me' avatar={true} onClick={logOut} />
-            </div> }
-
-            {/* mobile menu */}
-
-            {mobileMenuOpen  && <MobileMenu /> }
-
-            <div className="toggle__icon">
-                {!mobileMenuOpen ? <HeaderOption Icon={MenuIcon} title='' onClick={toggleMenu} /> : <HeaderOption Icon={CloseIcon} title='' onClick={toggleMenu} />}
-
             </div>
-
-
-
         </div>
     )
 }
 
-export default Header
+export default MobileMenu

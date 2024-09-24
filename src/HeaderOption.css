@@ -20,3 +20,12 @@
     height: 25px !important;
     width: 25px !important;
 }
+
+@media  (max-width:430px){
+    .headerOption{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        padding: 5px .25rem;
+    }
+}

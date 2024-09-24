@@ -1,24 +1,146 @@
-*{
+* {
   margin: 0;
 }
-.app{
+.app {
   display: flex;
   background-color: #f3f2ef;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-.app_body{
-  display: flex;
-  gap: 1rem;
+  width: 100%;
 }
 
-.feed__section{
+.app_body {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.feed__section {
   flex: 0.6;
   margin-top: 1rem;
 }
-.right_widgets{
+.right_widgets {
   flex: 0.2;
   margin-top: 1rem;
+}
 
+@media (max-width: 279px) {
+  .app_body {
+    width: 100%;
+    max-width: 400px;
+    flex-direction: column;
+  }
+  .sidebar {
+    position: static;
+  }
+}
+/* @media (min-width: 280px) and (max-width:600px) {
+  .app_body {
+    width: 100%;
+    max-width: 400px;
+    flex-direction: column;
+  }
+
+  .sidebar{
+    position: static;
+
+  }
+} */
+
+@media (min-width: 280px) {
+  .app_body {
+    /* width: 100%; */
+    max-width: 400px;
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: static;
+  }
+}
+@media (min-width: 475px) {
+  .app_body {
+    width: 100%;
+    max-width: 475px;
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: static;
+  }
+}
+/* @media (min-width: 601px) and (max-width:767px) {
+  .app_body {
+    width: 100%;
+    max-width: 550px;
+    flex-direction: column;
+  }
+
+  .sidebar{
+    position: unset;
+
+  }
+} */
+
+@media (min-width: 640px) {
+  .app_body {
+    width: 100%;
+    max-width: 640px;
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: unset;
+  }
+}
+@media (min-width: 768px) {
+  .app_body {
+    /* max-width: 768px; */
+    max-width: 640px;
+    flex-direction: row;
+  }
+}
+/* @media (min-width: 992px) {
+  .app_body {
+    width: 100%;
+    max-width: 870px;
+  }
+} */
+/* @media (min-width: 1200px) and (max-width:1440px) {
+  .app_body {
+    width: 100%;
+    /* max-width: 1150px; *
+    max-width: 922px;
+  }
+} */
+
+@media (min-width: 1024px) {
+  .app_body {
+    width: 100%;
+    max-width: 1024px;
+    max-width: 922px;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1280px) {
+  .app_body {
+    width: 100%;
+    max-width: 1024px;
+    max-width: 922px;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1536px) {
+  .app_body {
+    width: 100%;
+    max-width: 1536px;
+    flex-direction: row;
+  }
 }

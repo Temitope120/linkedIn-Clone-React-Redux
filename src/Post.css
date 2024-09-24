@@ -26,3 +26,11 @@
     display: flex;
     justify-content: space-evenly;
 }
+
+@media (max-width:385px){
+  .post__buttons{
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}

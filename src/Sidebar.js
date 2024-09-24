@@ -6,10 +6,9 @@ import { selectUser } from './userSlice';
 
 function Sidebar() {
     const user = useSelector(selectUser);
-    console.log(user, 'user here');
     
     const recentItem = (topic) => {
-        // return(
+        return(
             <div className="sidebar__recentItem">
             <span className="sidebar__hash">
                 #
@@ -18,7 +17,7 @@ function Sidebar() {
                 {topic}
             </p>
         </div>
-        // )
+        )
         
     }
     return (

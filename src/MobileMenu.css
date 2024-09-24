@@ -1,0 +1,9 @@
+.mobileMenuItems{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 58px;
+    right: 0;
+    background-color: white;
+    transition: all 3s ease-in;
+}
